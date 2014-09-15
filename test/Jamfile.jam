@@ -1,0 +1,15 @@
+import testing ;
+
+run
+    main.cpp
+    read_test.cpp
+    http_client_test.cpp
+    ../src/http_response_lexer.ll
+    /boost//system
+    /boost/test//boost_unit_test_framework
+    :
+    --report_level=detailed
+    :
+    :
+    <define>BOOST_TEST_NO_LIB=1
+    ;

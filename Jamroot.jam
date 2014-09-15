@@ -1,0 +1,21 @@
+import testing ;
+import os ;
+import flex ;
+
+use-project /boost : [ os.environ BOOST_ROOT ] ;
+
+project http-server
+    :   requirements
+        <include>include
+        <include>app
+        <include>vendor/rapidjson/include
+        <threading>multi
+        <toolset>gcc:<cxxflags>-std=gnu++0x
+        <toolset>clang:<cxxflags>-std=c++11
+    ;
+
+exe httpd
+    :
+    src/main.cpp
+    /boost//system
+    ;

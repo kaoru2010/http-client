@@ -27,8 +27,8 @@ public:
         return stream_;
     }
 
-    template <typename Socket, typename Handler>
-    void async_connect(Socket& socket, Handler&& handler)
+    template <typename Handler>
+    void async_connect(Handler&& handler)
     {
         io_service_.post([handler = std::move(handler)]()
         {

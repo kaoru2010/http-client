@@ -5,9 +5,11 @@
 #include <string>
 #include <utility>
 #include <memory>
-#include <boost/asio.hpp>
 
 namespace network { namespace protocols { namespace http {
+
+class http_client_base;
+using http_client_ptr = std::shared_ptr<http_client_base>;
 
 class http_client_base
 {

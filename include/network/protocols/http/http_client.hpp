@@ -57,7 +57,7 @@ public:
             goto yield_break;
 
         reenter(this) {
-            yield this->async_connect(this->socket(), call_self);
+            yield this->async_connect(call_self);
 
             do {
                 yield this->async_request(this->socket(), call_self);

@@ -4,6 +4,8 @@ run
     main.cpp
     read_test.cpp
     http_client_test.cpp
+    http_request_test.cpp
+    http_socket_test.cpp
     ../src/http_response_lexer.ll
     /boost//system
     /boost/test//boost_unit_test_framework
